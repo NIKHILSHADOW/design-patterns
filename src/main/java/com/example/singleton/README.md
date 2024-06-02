@@ -22,3 +22,24 @@ public class ConnectionPool {
 ```
 
 But the above one is eager initialisation.
+
+```java
+
+public class ConnectionPool {
+
+    private static ConnectionPool connectionPool = null;
+
+    private ConnectionPool() {
+
+    }
+
+    public static ConnectionPool getInstance() {
+        if (connectionPool == null) {
+            connectionPool = new ConnectionPool();
+        }
+        return connectionPool;
+    }
+}
+```
+
+But this is not thread safe.
