@@ -43,3 +43,26 @@ public class ConnectionPool {
 ```
 
 But this is not thread safe.
+
+```java
+
+
+public class ConnectionPool {
+
+    private static ConnectionPool connectionPool = null;
+
+    private ConnectionPool() {
+
+    }
+
+    public synchronized static ConnectionPool getInstance() {
+        if (connectionPool == null) {
+            connectionPool = new ConnectionPool();
+        }
+        return connectionPool;
+    }
+}
+
+```
+
+this is thread-safe, but performance wise it's not best, because it never accepts multiple threads inside method even if instance already has value

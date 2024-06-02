@@ -39,8 +39,14 @@ public class ConnectionPoolTest {
             myThreads[i].start();
         }
 
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         for (int i = 0; i < 20; i++) {
-            Assert.assertEquals(myThreads[0], myThreads[i]);
+            Assert.assertEquals(myThreads[0].connectionPool, myThreads[i].connectionPool);
         }
 
     }
