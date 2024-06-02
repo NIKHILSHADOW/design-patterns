@@ -8,9 +8,13 @@ public class ConnectionPool {
 
     }
 
-    public synchronized static ConnectionPool getInstance() {
+    public static ConnectionPool getInstance() {
         if (connectionPool == null) {
-            connectionPool = new ConnectionPool();
+            synchronized (ConnectionPool.class) {
+                if (connectionPool == null) {
+                    connectionPool = new ConnectionPool();
+                }
+            }
         }
         return connectionPool;
     }
