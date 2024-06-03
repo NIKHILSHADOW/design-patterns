@@ -1,5 +1,11 @@
 # Design Patterns
 
+### Contents
+
+[Singleton](#singleton)
+[Builder](#builder)
+[Prototype](#prototype)
+
 ## CREATIONAL DESIGN PATTERNS
 
 Focuses on instance creation
@@ -30,3 +36,7 @@ Focuses on Structuring the classes following design principles
 ### Builder
 
 [Builder](./src/main/java/com/example/builder/README.md "Builder readme")
+
+### Prototype
+
+[Prototype](./src/main/java/com/example/prototype/README.md)
