@@ -60,16 +60,16 @@ public class User {
         }
 
         public User build() {
+
+            if (!valid()) {
+                throw new RuntimeException("illegal argurment");
+            }
             User user = new User();
             user.email = email;
             user.address = address;
             user.age = age;
             user.name = name;
             user.phone = phone;
-
-            if (!valid()) {
-                throw new RuntimeException("illegal argurment");
-            }
 
             return user;
         }

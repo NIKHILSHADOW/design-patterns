@@ -336,6 +336,11 @@ public class User {
         }
 
         public User build() {
+
+            if (!valid()) {
+                throw new RuntimeException("illegal argurment");
+            }
+
             User user = new User();
             user.email = email;
             user.address = address;
@@ -343,9 +348,6 @@ public class User {
             user.name = name;
             user.phone = phone;
 
-            if (!valid()) {
-                throw new RuntimeException("illegal argurment");
-            }
 
             return user;
         }
@@ -380,3 +382,5 @@ public class UserTest {
 }
 
 ```
+
+// Fields in User and UserBuilder are same, so we can get rid of it.
