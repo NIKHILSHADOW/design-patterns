@@ -266,3 +266,117 @@ public class UserTest {
 }
 
 ```
+
+#### Improvements
+
+We can use method chaining and create static intialiser for builder instance
+
+```java
+// User.java
+
+package com.example.builder.users;
+
+import lombok.Getter;
+
+@Getter
+public class User {
+
+    private String name;
+
+    private String email;
+
+    private String phone;
+
+    private String address;
+
+    private Integer age;
+
+    private User() {
+    }
+
+    public static UserBuilder builder() {
+        return new UserBuilder();
+    }
+
+    @Getter
+    public static class UserBuilder {
+        private String name;
+
+        private String email;
+
+        private String phone;
+
+        private String address;
+
+        private Integer age;
+
+        public UserBuilder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public UserBuilder email(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public UserBuilder phone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+
+        public UserBuilder address(String address) {
+            this.address = address;
+            return this;
+        }
+
+        public UserBuilder age(Integer age) {
+            this.age = age;
+            return this;
+        }
+
+        public User build() {
+            User user = new User();
+            user.email = email;
+            user.address = address;
+            user.age = age;
+            user.name = name;
+            user.phone = phone;
+
+            if (!valid()) {
+                throw new RuntimeException("illegal argurment");
+            }
+
+            return user;
+        }
+
+        public boolean valid() {
+            return true;
+        }
+
+    }
+}
+
+
+// UserTest.java
+
+public class UserTest {
+
+    @Test
+    public void UserInstanceTest() {
+
+        User user = User
+                .builder()
+                .address("kkd")
+                .name("ivan")
+                .age(23)
+                .build();
+
+        Assert.assertNotNull(user);
+
+        Assert.assertEquals("ivan", user.getName());
+
+    }
+}
+
+```
