@@ -2,9 +2,9 @@
 
 ### Contents
 
-[Singleton](#singleton)
-[Builder](#builder)
-[Prototype](#prototype)
+- [Singleton](#singleton)
+- [Builder](#builder)
+- [Prototype](#prototype)
 
 ## CREATIONAL DESIGN PATTERNS
 

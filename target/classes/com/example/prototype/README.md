@@ -1,11 +1,11 @@
-## PROTOTYPE
+# PROTOTYPE
 
-#### Contents
+# Contents
 
-[Simple Prototype](#simple-prototype)
-[Prototype Registry](#prototype-registry)
-
-- Two types
+- [PROTOTYPE](#prototype)
+- [Contents](#contents)
+  - [Simple Prototype](#simple-prototype)
+  - [Prototype Registry](#prototype-registry)
 
 1. Simple Prototype
 2. Prototype registry
@@ -20,7 +20,7 @@ Why we need this?
 
 For suppose converting field values to pixels is heavy task in graphics. So we create only once and reuse it for same type of object.
 
-# Steps
+Steps :
 
 1. Create a clonable interface with clone method
 2. Create sub classes implementing clone method.
