@@ -151,3 +151,50 @@ public class GraphicalObjTest {
 ```
 
 ### Prototype Registry
+
+When morethan one objects are there , then we use this registry, to easy access.
+
+1. It solves heavycomputational time.
+2. It hides subclasses.
+
+```java
+
+public class GraphicalRegistry {
+    Map<GraphicalObjType, GraphicalObj> registry = new HashMap<>();
+
+    public void addObject(GraphicalObjType graphicalObjType, GraphicalObj graphicalObj) {
+        this.registry.put(graphicalObjType, graphicalObj);
+    }
+
+    public GraphicalObj getObject(GraphicalObjType graphicalObjType) {
+        return this.registry.get(graphicalObjType);
+    }
+}
+
+```
+
+```java
+public class GameTest {
+
+    private GraphicalRegistry graphicalRegistry = new GraphicalRegistry();
+
+    @Test
+    public void instanceTest() {
+        Background background = new Background(23, 34, 34, 23, GraphicalObjType.BACKGROUND);
+
+        Assert.assertNotNull(background);
+
+        graphicalRegistry.addObject(background.getGraphicalObjType(), background);
+
+        Background backgroundClone = (Background) graphicalRegistry.getObject(GraphicalObjType.BACKGROUND).clone();
+
+        Assert.assertEquals(background.getHeight(), backgroundClone.getHeight());
+
+    }
+}
+
+```
+
+But subclasses are first created by clients to insert in registry,
+
+So next comes Factory to solve involvement of subclasses.
