@@ -1,12 +1,18 @@
 # Design Patterns
 
-### Contents
+## Contents
 
-- [Singleton](#singleton)
-- [Builder](#builder)
-- [Prototype](#prototype)
+- [Design Patterns](#design-patterns)
+  - [Contents](#contents)
+    - [CREATIONAL DESIGN PATTERNS](#creational-design-patterns)
+      - [Singleton](#singleton)
+      - [Builder](#builder)
+      - [Prototype](#prototype)
+      - [Factory](#factory)
+    - [STRUCTURAL DESIGN PATTERNS](#structural-design-patterns)
+    - [BEHAVIOURAL DESIGN PATTERNS](#behavioural-design-patterns)
 
-## CREATIONAL DESIGN PATTERNS
+### CREATIONAL DESIGN PATTERNS
 
 Focuses on instance creation
 
@@ -15,7 +21,23 @@ Focuses on instance creation
 3. Prototype
 4. Factory
 
-## STRUCTURAL DESIGN PATTERNS
+#### Singleton
+
+[Singleton](./src/main/java/com/example/singleton/README.md "singleton readme")
+
+#### Builder
+
+[Builder](./src/main/java/com/example/builder/README.md "Builder readme")
+
+#### Prototype
+
+[Prototype](./src/main/java/com/example/prototype/README.md)
+
+#### Factory
+
+[Factory](./src/main/java/com/example/factory/README.md)
+
+### STRUCTURAL DESIGN PATTERNS
 
 Focuses on Structuring the classes following design principles
 
@@ -24,19 +46,7 @@ Focuses on Structuring the classes following design principles
 3. Facade
 4. Decorator
 
-## BEHAVIOURAL DESIGN PATTERNS
+### BEHAVIOURAL DESIGN PATTERNS
 
 1. Observer
 2. Strategy
-
-### Singleton
-
-[Singleton](./src/main/java/com/example/singleton/README.md "singleton readme")
-
-### Builder
-
-[Builder](./src/main/java/com/example/builder/README.md "Builder readme")
-
-### Prototype
-
-[Prototype](./src/main/java/com/example/prototype/README.md)
