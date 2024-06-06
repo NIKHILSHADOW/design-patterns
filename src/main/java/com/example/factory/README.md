@@ -11,6 +11,8 @@
       - [ Steps ](#-steps-)
       - [Code](#code)
     - [Abstract Factory](#abstract-factory)
+      - [Steps](#steps-1)
+      - [Code](#code-1)
 
 **Factory Intro**
 
@@ -142,4 +144,92 @@ public class PrimaryButtonFactory implements ButtonFactory {
 
 ```
 
+But what if there is a form which uses this button and input box and checkboxes with types for each based on resolution and if they mention have group like.
+
+1. Web(primarybutton , textbox, squarecheckbox)
+2. Mobile app(roundbutton, textline, roundcheckbox(just for understanding))
+
+**Too many factory classes?**
+
+Or is there a way to solve class explosion problem?
+
+Here Comes
+
 ### Abstract Factory
+
+It says **Provide an interface for creating families of related or dependent
+objects without specifying their concrete classes**
+
+Suppose we wanna create object based on group.
+
+For suppose
+
+Our requirement is creating button, inputbox, checkbox and they have subclasses for each.
+
+but if **web**, we need to create
+
+1. Primary button
+2. Primary Checkbox
+3. primary input box
+
+If **mobile**
+
+1. Secondary button
+2. Secondary Checkbox
+3. Secondary input box
+
+So here we say web is a family and mobile is family, because they need same type of object if used in one type.
+
+So here steps to use
+
+#### Steps
+
+1. create product interfaces.
+2. create concrete classes for product
+3. create common factory interface for family and methods used by family
+4. create concrete factories and implement methods.
+
+#### Code
+
+```java
+// Step 1. Create Product interface
+
+public interface Button {
+
+}
+
+// Step 2. Create Respective types
+
+public class PrimaryButton extends Button {
+
+    public PrimaryButton() {
+    }
+
+}
+
+// step - 3. create common factory interface for family and methods used by family
+
+public interface FormFactory {
+
+    public Button createButton();
+
+    public Checkbox createCheckbox();
+
+}
+
+// step- 4. create concrete factories and implement methods.
+
+public class WebformFactory implements FormFactory {
+
+    @Override
+    public Button createButton() {
+        return new PrimaryButton();
+    }
+
+    @Override
+    public Checkbox createCheckbox() {
+        return new PrimaryCheckbox();
+    }
+
+}
+```
