@@ -1,7 +1,15 @@
 # SingleTon
 
-- Class should have Only one instance.
-- Shared resources are the ones which mostly uses singleton class.
+- [Home](../../../../../../README.md)
+
+## Contents
+
+- [SingleTon](#singleton)
+  - [Contents](#contents)
+    - [Solution](#solution)
+    - [Improved Solution](#improved-solution)
+
+### Solution
 
 ```java
 
@@ -88,6 +96,8 @@ public class ConnectionPool {
 ```
 
 but this is again not thread safe because if multiple threads hit methods, it checks if they are null, if yes it will send one by one inside each will get a new instance. so we introduce double check locking.
+
+### Improved Solution
 
 ```java
 public class ConnectionPool {

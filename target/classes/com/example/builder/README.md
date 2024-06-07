@@ -1,4 +1,17 @@
-## BUILDER
+# BUILDER
+
+- [Home](../../../../../../README.md)
+
+## Contents
+
+- [BUILDER](#builder)
+  - [Contents](#contents)
+    - [Introduction](#introduction)
+    - [Steps](#steps)
+    - [Code Solution-1](#code-solution-1)
+      - [Improvements](#improvements)
+
+### Introduction
 
 Why Buidler pattern.
 
@@ -181,11 +194,15 @@ Here again we are dependent on constructor.
 - Here it is clearly violating the Open/Close Design principle.
   `what if we want to chanage field name, we need to open other class as well.`
 
+### Steps
+
 So here comes builder pattern
 
 1. create static inner class (for USerDTo).
 2. hide Outer class constructor (User class).
 3. implement build method inside inner class which return outer class object.
+
+### Code Solution-1
 
 ```java
 

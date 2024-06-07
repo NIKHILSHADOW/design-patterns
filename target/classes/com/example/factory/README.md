@@ -1,18 +1,17 @@
-# FACTORY
+- [Home](../../../../../../README.md)
 
 ## Contents
 
-- [FACTORY](#factory)
-  - [Contents](#contents)
-    - [Simple Factory](#simple-factory)
-      - [Steps](#steps)
-      - [Simple Factory Code](#simple-factory-code)
-    - [Factory Method](#factory-method)
-      - [ Steps ](#-steps-)
-      - [Code](#code)
-    - [Abstract Factory](#abstract-factory)
-      - [Steps](#steps-1)
-      - [Code](#code-1)
+- [Contents](#contents)
+  - [Simple Factory](#simple-factory)
+    - [Steps](#steps)
+    - [Simple Factory Code](#simple-factory-code)
+  - [Factory Method](#factory-method)
+    - [ Steps ](#-steps-)
+    - [Code](#code)
+  - [Abstract Factory](#abstract-factory)
+    - [Steps](#steps-1)
+    - [Code](#code-1)
 
 **Factory Intro**
 
