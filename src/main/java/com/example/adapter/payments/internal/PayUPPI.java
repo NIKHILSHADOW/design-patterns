@@ -13,8 +13,8 @@ public class PayUPPI implements PaymentProviderInterface {
     }
 
     @Override
-    public String makePayment() {
-        return api.pay();
+    public String makePayment(PaymentRequest paymentRequest) {
+        return api.pay(paymentRequest.getName(), paymentRequest.getEmail());
     }
 
     @Override

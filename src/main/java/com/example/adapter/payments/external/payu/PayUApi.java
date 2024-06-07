@@ -6,7 +6,7 @@ public class PayUApi {
         return "payu-link";
     }
 
-    public String pay() {
+    public String pay(String name, String email) {
         return "payu-id";
     }
 

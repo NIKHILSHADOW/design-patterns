@@ -6,7 +6,7 @@ public class RazorpayApi {
         return "razorpayLink";
     }
 
-    public String makePayment() {
+    public String makePayment(String phone, String name) {
         return "razorpay-id";
     }
 

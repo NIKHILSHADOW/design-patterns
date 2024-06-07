@@ -13,8 +13,8 @@ public class RazorPayPPI implements PaymentProviderInterface {
     }
 
     @Override
-    public String makePayment() {
-        return api.makePayment();
+    public String makePayment(PaymentRequest paymentRequest) {
+        return api.makePayment(paymentRequest.getPhone(), paymentRequest.getName());
     }
 
     @Override
