@@ -10,6 +10,7 @@
       - [Prototype](#prototype)
       - [Factory](#factory)
     - [STRUCTURAL DESIGN PATTERNS](#structural-design-patterns)
+      - [Adapter](#adapter)
     - [BEHAVIOURAL DESIGN PATTERNS](#behavioural-design-patterns)
 
 ### CREATIONAL DESIGN PATTERNS
@@ -45,6 +46,10 @@ Focuses on Structuring the classes following design principles
 2. Flyweight
 3. Facade
 4. Decorator
+
+#### Adapter
+
+[Adapter](./src/main/java/com/example/adapter/README.md)
 
 ### BEHAVIOURAL DESIGN PATTERNS
 
