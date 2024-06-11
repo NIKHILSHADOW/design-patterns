@@ -12,6 +12,7 @@
     - [STRUCTURAL DESIGN PATTERNS](#structural-design-patterns)
       - [Adapter](#adapter)
       - [Flyweight](#flyweight)
+      - [Decorator](#decorator)
     - [BEHAVIOURAL DESIGN PATTERNS](#behavioural-design-patterns)
 
 ### CREATIONAL DESIGN PATTERNS
@@ -55,6 +56,10 @@ Focuses on Structuring the classes following design principles
 #### Flyweight
 
 [Flyweight](./src/main/java/com/example/flyweight/README.md)
+
+#### Decorator
+
+[Decorator](./src/main/java/com/example/decorator/README.md)
 
 ### BEHAVIOURAL DESIGN PATTERNS
 
