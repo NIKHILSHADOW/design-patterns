@@ -11,7 +11,7 @@ public class Database {
     private DatabaseType databaseType;
 
     // 1. hide constructor
-    private Database() {
+    protected Database() {
     }
 
     // 5 create static intialiser for getting builder class instance
