@@ -14,6 +14,8 @@
       - [Flyweight](#flyweight)
       - [Decorator](#decorator)
     - [BEHAVIOURAL DESIGN PATTERNS](#behavioural-design-patterns)
+      - [Observer](#observer)
+      - [Strategy](#strategy)
 
 ### CREATIONAL DESIGN PATTERNS
 
@@ -65,3 +67,11 @@ Focuses on Structuring the classes following design principles
 
 1. Observer
 2. Strategy
+
+#### Observer
+
+[Observer](./src/main/java/com/example/observer/README.md)
+
+#### Strategy
+
+[Strategy](./src/main/java/com/example/strategy/README.md)
